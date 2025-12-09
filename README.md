@@ -20,3 +20,10 @@ Express.js приложение для генерации и управлени�
 git clone <repository-url>
 cd random-quotes-generator
 npm install
+
+## 📷 Скриншоты приложения
+### Главная страница приложения
+![Главная страница](screenshots/screenshot1.png)
+![Главная страница](screenshots/screenshot2.png)
+![Главная страница](screenshots/screenshot3.png)
+
