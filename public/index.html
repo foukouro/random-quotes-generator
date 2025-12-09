@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Генератор случайных цитат</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-quote-left"></i> Генератор случайных цитат</h1>
+            <p class="subtitle">Вдохновляющие цитаты для программистов и не только</p>
+        </header>
+
+        <main>
+            <section class="quote-section">
+                <div class="quote-card" id="quoteDisplay">
+                    <div class="quote-text" id="quoteText">
+                        Нажмите кнопку, чтобы получить случайную цитату
+                    </div>
+                    <div class="quote-author" id="quoteAuthor">
+                        —
+                    </div>
+                    <div class="quote-category" id="quoteCategory">
+                        категория
+                    </div>
+                </div>
+
+                <div class="controls">
+                    <button class="btn btn-primary" id="getRandomBtn">
+                        <i class="fas fa-random"></i> Новая цитата
+                    </button>
+                    <button class="btn btn-secondary" id="getProgrammingBtn">
+                        <i class="fas fa-code"></i> Цитата про программирование
+                    </button>
+                </div>
+            </section>
+
+            <section class="api-section">
+                <h2><i class="fas fa-code"></i> API Эндпоинты</h2>
+                <div class="endpoints">
+                    <div class="endpoint">
+                        <code>GET /api/quotes</code>
+                        <span>Все цитаты</span>
+                    </div>
+                    <div class="endpoint">
+                        <code>GET /api/quotes/random</code>
+                        <span>Случайная цитата</span>
+                    </div>
+                    <div class="endpoint">
+                        <code>GET /api/quotes/1</code>
+                        <span>Цитата по ID</span>
+                    </div>
+                    <div class="endpoint">
+                        <code>GET /api/quotes/category/программирование</code>
+                        <span>Фильтр по категории</span>
+                    </div>
+                    <div class="endpoint">
+                        <code>GET /api/quotes/search?q=код</code>
+                        <span>Поиск по тексту</span>
+                    </div>
+                </div>
+
+                <div class="test-buttons">
+                    <h3>Тестирование API:</h3>
+                    <button class="btn btn-small" onclick="fetchAllQuotes()">Все цитаты</button>
+                    <button class="btn btn-small" onclick="fetchByCategory('мотивация')">Мотивация</button>
+                    <button class="btn btn-small" onclick="searchQuotes('работа')">Поиск "работа"</button>
+                </div>
+
+                <div class="api-response" id="apiResponse">
+                    Ответ API появится здесь
+                </div>
+            </section>
+
+            <section class="instructions">
+                <h2><i class="fas fa-info-circle"></i> Инструкция</h2>
+                <ol>
+                    <li>Установите зависимости: <code>npm install</code></li>
+                    <li>Запустите сервер: <code>npm start</code> или <code>npm run dev</code></li>
+                    <li>Откройте в браузере: <code>http://localhost:3000</code></li>
+                    <li>Используйте API для получения цитат</li>
+                </ol>
+            </section>
+        </main>
+
+        <footer>
+            <p>Express.js приложение для учебного проекта</p>
+            <p class="tech">Tech: Node.js, Express, HTML5, CSS3</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

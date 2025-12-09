@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #823927 0%, #e6c04d 100%);
+    color: #333;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+header {
+    background: linear-gradient(90deg, #e57346, #edcc3a);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+main {
+    padding: 40px;
+}
+
+.quote-section {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.quote-card {
+    background: #f8fafc;
+    border-left: 5px solid #e58846;
+    padding: 40px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.quote-card:hover {
+    transform: translateY(-5px);
+}
+
+.quote-text {
+    font-size: 1.8rem;
+    line-height: 1.6;
+    color: #3b241e;
+    margin-bottom: 20px;
+    font-style: italic;
+}
+
+.quote-author {
+    font-size: 1.3rem;
+    color: #df3214;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.quote-category {
+    display: inline-block;
+    background: #e0e7ff;
+    color: #e54e46;
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.btn-primary {
+    background: #e56346;
+    color: white;
+}
+
+.btn-secondary {
+    background: #f1f5f9;
+    color: #475569;
+    border: 2px solid #cbd5e1;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 14px rgba(0, 0, 0, 0.1);
+}
+
+.btn-primary:hover {
+    background: #ca4738;
+}
+
+.btn-secondary:hover {
+    background: #e2e8f0;
+}
+
+.api-section {
+    background: #f8fafc;
+    padding: 30px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+}
+
+.api-section h2 {
+    color: #e56946;
+    margin-bottom: 25px;
+    font-size: 1.8rem;
+}
+
+.endpoints {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.endpoint {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 3px solid #b99110;
+    display: flex;
+    flex-direction: column;
+}
+
+.endpoint code {
+    background: #f1f5f9;
+    padding: 8px;
+    border-radius: 5px;
+    margin-bottom: 8px;
+    font-family: 'Courier New', monospace;
+    color: #dc2626;
+}
+
+.test-buttons {
+    margin-bottom: 20px;
+}
+
+.test-buttons h3 {
+    margin-bottom: 15px;
+    color: #475569;
+}
+
+.btn-small {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.api-response {
+    background: #3b221e;
+    color: #e2e8f0;
+    padding: 20px;
+    border-radius: 8px;
+    font-family: 'Courier New', monospace;
+    white-space: pre-wrap;
+    max-height: 400px;
+    overflow-y: auto;
+}
+
+.instructions {
+    background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+    padding: 25px;
+    border-radius: 10px;
+    border-left: 5px solid #e9950e;
+}
+
+.instructions h2 {
+    color: #a13503;
+    margin-bottom: 20px;
+}
+
+.instructions ol {
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.instructions li {
+    margin-bottom: 10px;
+}
+
+.instructions code {
+    background: #dbeafe;
+    padding: 3px 8px;
+    border-radius: 4px;
+    color: #d86b1d;
+}
+
+footer {
+    background: #3b301e;
+    color: #cbd5e1;
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #553333;
+}
+
+footer .tech {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #b89594;
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .container {
+        border-radius: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    .quote-text {
+        font-size: 1.4rem;
+    }
+
+    .controls {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%;
+        max-width: 300px;
+    }
+}
